@@ -1,13 +1,18 @@
 body {
     background: #407020;
 }
-
+header {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
 
 
 
 
 .about_me {
-
+    color: white;
 }
 .orange {
     background: #a05030;
