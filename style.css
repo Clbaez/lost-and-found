@@ -1,5 +1,15 @@
-body {
+/* everything that is not within the @media screen is for the mobile view*/
+
+body { /*I decided that leaving the body with the background would be easier*/
     background: #407020;
+}
+.content_container { /*somebody else come up with a better name for this class please*/
+    /*put this class in the <header> <main> and <footer> tags so that it's all uniform.*/
+
+
+}
+h1 {
+    text-align: center;
 }
 header {
     color: white;
@@ -14,6 +24,7 @@ a {
 
 .about_me {
     color: white;
+    display: grid;
 }
 .orange {
     background: #a05030;
@@ -29,4 +40,11 @@ iframe {
     /* frameborder: 0;
     marginheight: 0;
     marginwidth: 0; */
+}
+
+@media screen and (min-width: 426px) { /* This is for non-mobile view. In other words, if you are looking at it on a computer, but it in here.*/
+    .content_container{
+        margin: 5%;
+    }
+
 }
