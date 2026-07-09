@@ -48,5 +48,8 @@ iframe {
     .content_container{
         margin: 5%;
     }
+    h1{
+        font-size: 3em;
+    }
 
 }
