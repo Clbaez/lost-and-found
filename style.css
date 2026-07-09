@@ -52,4 +52,8 @@ iframe {
         font-size: 3em;
     }
 
+    .about_me{
+        display: flex;
+    }
+
 }
