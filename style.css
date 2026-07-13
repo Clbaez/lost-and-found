@@ -80,10 +80,22 @@ iframe {
 }
 
 @media screen and (min-width: 426px) {
-
     /* This is for non-mobile view. In other words, if you are looking at it on a computer, but it in here.*/
     .content_container {
         margin: 5%;
+    }
+
+    
+
+    .bar{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .bar div a{
+        padding: 10px;
+    }
+    .bar nav{
+        text-align: right;
     }
 
     h1 {
