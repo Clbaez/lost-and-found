@@ -3,55 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lost Items</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #39751f;
+            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .page-container {
+            width: 85%;
+            max-width: 1300px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        /* Header */
+
+        header {
+            min-height: 350px;
+            color: white;
+            background:
+                linear-gradient(
+                    rgba(31, 48, 31, 0.78),
+                    rgba(31, 48, 31, 0.78)
+                ),
+                url("images/header-background.jpg") center / cover no-repeat;
+        }
+
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 28px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            background-color: white;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a.active {
+            font-weight: bold;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+        }
+
+        .hero {
+            display: flex;
+            min-height: 270px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 52px;
+        }
+
+        /* Form area */
+
+        .lost-form-section {
+            display: grid;
+            grid-template-columns: 38% 62%;
+            gap: 45px;
+            align-items: start;
+            padding: 10px 32px 60px;
+        }
+
+        .lost-image {
+            display: block;
+            width: 100%;
+            max-width: 430px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .form-column {
+            min-width: 0;
+            padding-top: 12px;
+        }
+
+        .google-form {
+            display: block;
+            width: 100%;
+            height: 430px;
+            border: none;
+        }
+
+        /* Results area */
+
+        .results-section {
+            margin: 0 32px 50px;
+            padding: 40px 0;
+            border-top: 2px solid #d7d7d7;
+        }
+
+        .results-section h2 {
+            margin-top: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+        }
+
+        .results-section p {
+            margin-bottom: 24px;
+            font-size: 17px;
+        }
+
+        .results-frame {
+            display: block;
+            width: 100%;
+            height: 600px;
+            border: 1px solid #cccccc;
+            background-color: white;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 30px;
+            color: white;
+            text-align: center;
+            background-color: #263d2a;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+            .page-container {
+                width: 100%;
+            }
+
+            .top-nav {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .lost-form-section {
+                grid-template-columns: 1fr;
+            }
+
+            .lost-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .google-form {
+                height: 500px;
+            }
+            lost-image {
+                width: 50px
+            }
+        }
+
+        /* Phone */
+
+        @media (max-width: 600px) {
+            header {
+                min-height: 280px;
+            }
+
+            .top-nav {
+                padding: 15px;
+            }
+
+            .hero {
+                min-height: 180px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .lost-form-section {
+                gap: 20px;
+                padding: 20px 15px 40px;
+            }
+
+            .results-section {
+                margin: 0 15px 40px;
+            }
+
+            .lost-image {
+                width: 50px
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <header>
-        <div>
-            <img class="logo" src="" alt="Logo">
-            <a href="index.html">Lost & Found</a>
-        </div>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="lost.html">Lost Items</a> |
-            <a href="found.html">Found Items</a> |
-            <a href="help_contact_us.html">Help / Contact Us</a> |
-            <a href="about_us.html">About Us</a>
-        </nav>
+    <div class="page-container">
 
-        <h1>Lost and Found</h1>
-    </header>
+        <header>
+            <div class="top-nav">
 
-    <main>
-        <h2>Report a Lost Item</h2>
-    
-        <p>
-            Please fill out the form below to report a lost item.
-        </p>
-    
-        <iframe 
-            src="https://docs.google.com/forms/d/1lD2uU_VNydIC6z-ubkaP7emsdATOHcmIxGoKUUfWjiA/viewform?embedded=true"
-            width="100%"
-            height="900"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0">
-            Loading…
-        </iframe>
-    </main>
+                <a class="brand" href="index.html">
+                    <img
+                        class="logo"
+                        src="images/compass.png"
+                        alt="Lost and Found logo"
+                    >
+                    <span>Lost &amp; Found</span>
+                </a>
 
-    <footer>
-        <p>
-            <a href="index.html">Home</a> |
-            <a href="lost.html">Lost Items</a> |
-            <a href="found.html">Found Items</a> |
-            <a href="about.html">About Us</a>
-        </p>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="lost.html" class="active">Lost Items</a>
+                    <a href="found.html">Found Items</a>
+                    <a href="help_contact_us.html">Help / Contact Us</a>
+                    <a href="about_us.html">About</a>
+                </nav>
 
-        <p>&copy; 2026 Lost and Found. All rights reserved.</p>
-    </footer>
+            </div>
+
+            <div class="hero">
+                <h1>Lost Items</h1>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="lost-form-section">
+
+                <div>
+                    <img
+                        class="lost-image"
+                        src="images/shield.png"
+                        alt="Lost item question mark symbol"
+                    >
+                </div>
+
+                <div class="form-column">
+                    <iframe
+                        class="google-form"
+                        src="https://docs.google.com/forms/d/1lD2uU_VNydIC6z-ubkaP7emsdATOHcmIxGoKUUfWjiA/viewform?embedded=true"
+                        title="Lost item form">
+                        Loading…
+                    </iframe>
+                </div>
+
+            </section>
+
+            <section class="results-section">
+
+                <h2>Reported Lost Items</h2>
+
+                <p>
+                    View items that have already been reported as lost.
+                </p>
+
+                <iframe
+                    class="results-frame"
+                    src="https://docs.google.com/spreadsheets/d/1kNHui_jKbhHyrmnCFIaS20oAQkeJzaiHUcTivhBG4e4/preview?gid=0&amp;rm=minimal"
+                    title="Reported lost items">
+                </iframe>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>
+                <a href="index.html">Home</a> |
+                <a href="lost.html">Lost Items</a> |
+                <a href="found.html">Found Items</a> |
+                <a href="about_us.html">About Us</a>
+            </p>
+
+            <p>&copy; 2026 Lost and Found. All rights reserved.</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
