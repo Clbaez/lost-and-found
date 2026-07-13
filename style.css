@@ -13,6 +13,8 @@ body {
     /*put this class in the <header> <main> and <footer> tags so that it's all uniform.*/
 
 
+    margin: 3%;
+    padding: 3%;
 }
 
 h1 {
@@ -88,6 +90,7 @@ iframe {
     /* This is for non-mobile view. In other words, if you are looking at it on a computer, but it in here.*/
     .content_container {
         margin: 5%;
+        padding: 40px;
     }
 
 
