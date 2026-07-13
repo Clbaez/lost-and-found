@@ -1,25 +1,51 @@
 /* everything that is not within the @media screen is for the mobile view*/
 
-body { /*I decided that leaving the body with the background would be easier*/
+/* Loads in the font for the headers; leave this at the top of the CSS file unless adding a@charset above it */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+    /*I decided that leaving the body with the background would be easier*/
     background: #407020;
 }
-.content_container { /*somebody else come up with a better name for this class please*/
+
+.content_container {
+    /*somebody else come up with a better name for this class please*/
     /*put this class in the <header> <main> and <footer> tags so that it's all uniform.*/
 
 
 }
+
 h1 {
     text-align: center;
 }
+
 header {
     color: white;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
-main{
+
+main {
     background: white;
+}
+
+
+/* Header Font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Merriweather, Georgia, serif;
+}
+
+/* Normal text font*/
+p {
+    font-family: "Trebuchet MS", sans-serif;
 }
 
 
@@ -53,15 +79,18 @@ iframe {
     marginwidth: 0; */
 }
 
-@media screen and (min-width: 426px) { /* This is for non-mobile view. In other words, if you are looking at it on a computer, but it in here.*/
-    .content_container{
+@media screen and (min-width: 426px) {
+
+    /* This is for non-mobile view. In other words, if you are looking at it on a computer, but it in here.*/
+    .content_container {
         margin: 5%;
     }
-    h1{
+
+    h1 {
         font-size: 3em;
     }
 
-    .about_me{
+    .about_me {
         display: flex;
     }
     .about_me img{
