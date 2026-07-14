@@ -6,6 +6,8 @@
 body {
     /*I decided that leaving the body with the background would be easier*/
     background: #407020;
+
+    margin: 0;
 }
 
 .content_container {
@@ -13,7 +15,7 @@ body {
     /*put this class in the <header> <main> and <footer> tags so that it's all uniform.*/
 
 
-    margin: 0, 3%;
+    margin: 0 3%;
     padding: 3%;
 }
 
@@ -89,7 +91,7 @@ iframe {
 
     /* This is for non-mobile view. In other words, if you are looking at it on a computer, but it in here.*/
     .content_container {
-        margin: 0, 5%;
+        margin: 0 5%;
         padding: 40px;
     }
 
@@ -135,10 +137,8 @@ header {
     min-height: 350px;
     color: white;
     background:
-        linear-gradient(
-            rgba(31, 48, 31, 0.78),
-            rgba(31, 48, 31, 0.78)
-        ),
+        linear-gradient(rgba(31, 48, 31, 0.78),
+            rgba(31, 48, 31, 0.78)),
         url("images/header-background.jpg") center / cover no-repeat;
 }
 
