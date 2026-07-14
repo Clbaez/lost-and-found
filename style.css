@@ -116,10 +116,15 @@ iframe {
 
     .about_me {
         display: flex;
+        align-items: center;
+    }
+
+    .people_container{
+        margin: 5%;
     }
 
     .about_me img {
-        height: auto;
+        height: 200px;
         width: 200px;
         margin: 10px 25px;
     }
