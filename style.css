@@ -100,10 +100,18 @@ iframe {
     .bar {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .bar div{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: start;
     }
 
     .bar div a {
         padding: 10px;
+        font-size: 1.5em;
     }
 
     .bar nav {
@@ -120,7 +128,7 @@ iframe {
     }
 
     .people_container{
-        margin: 5%;
+        margin: 0 5%;
     }
 
     .about_me img {
