@@ -149,10 +149,7 @@ iframe {
 header {
     min-height: 350px;
     color: white;
-    background:
-        linear-gradient(rgba(31, 48, 31, 0.78),
-            rgba(31, 48, 31, 0.78)),
-        url("images/header-background.jpg") center / cover no-repeat;
+    background: #505d50;
 }
 
 .top-nav {
